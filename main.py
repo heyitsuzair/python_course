@@ -1,3 +1,5 @@
-a="1"
-b="2"
-print(int(a)+int(b))
+# name = input('Enter Your Name:')
+# print('My Name Is', name)
+x = input('Input First Number:')
+y = input('Input Second Number:')
+print(int(x) + int(y))
