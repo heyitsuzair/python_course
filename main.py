@@ -1,5 +1,6 @@
-# name = input('Enter Your Name:')
-# print('My Name Is', name)
-x = input('Input First Number:')
-y = input('Input Second Number:')
-print(int(x) + int(y))
+greet = '''Hello My Name
+Is Uzair'''
+# print(greet[1])
+
+for char in greet:
+    print(char)
