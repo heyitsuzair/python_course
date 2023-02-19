@@ -1,6 +1,2 @@
-greet = '''Hello My Name
-Is Uzair'''
-# print(greet[1])
-
-for char in greet:
-    print(char)
+names = 'Uzair,Ahmed'
+print(names[0:4])
