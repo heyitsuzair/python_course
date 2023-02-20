@@ -1,6 +1,7 @@
-count=5
-while(count>0):
-    print(count)
-    count=count-1
-else:
-    print('I Am Out Of While')
+def calculateGmean(a, b):
+    gmean = (a*b)/(a+b)
+    return gmean
+
+
+print(calculateGmean(1, 2))
+print(calculateGmean(4, 10))
