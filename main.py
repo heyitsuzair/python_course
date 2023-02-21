@@ -1,5 +1,12 @@
-s1 = {2, 3, 4, 5, 6}
-s2 = {3, 7, 8, 9, 10}
-print(s1.intersection(s2))
-s1.intersection_update(s2)
-print(s2.isdisjoint(s1))
+dic = {
+    "Uzair": "Human Being",
+    "Spoon": "Crockery"
+}
+# print(dic["Uzair"])
+# print(dic.get('Uzair'))
+
+# for info in dic.keys():
+#     print(dic[info])
+
+for key, value in dic.items():
+    print(key, value)
