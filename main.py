@@ -1,4 +1,5 @@
-a = int(input('Enter Any Value Between 5 And 9:'))
+a = 12
+b = 20
+result = True if a > 10 else False
 
-if (a < 5 or a > 9):
-    raise Exception('Value must be between 5 and 9')
+print(result)
