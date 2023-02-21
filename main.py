@@ -1,12 +1,13 @@
-dic = {
-    "Uzair": "Human Being",
-    "Spoon": "Crockery"
+ep1 = {
+    122: 45,
+    123: 89,
+    124: 65,
+    670: 65
 }
-# print(dic["Uzair"])
-# print(dic.get('Uzair'))
-
-# for info in dic.keys():
-#     print(dic[info])
-
-for key, value in dic.items():
-    print(key, value)
+ep2 = {167: 90, 150: 45}
+# ep1.update(ep2)
+# ep1.clear()
+# ep1.pop(122)
+# ep1.popitem()
+del ep1[122]
+print(ep1)
