@@ -1,22 +1,6 @@
-# def average(a=2, b=2):
-#     print('Average Is', (a+b)/2)
+letter = 'Hey My Name Is {1} and I Am From {0}'
+country = 'Pakistan'
+name = 'Uzair'
 
-
-# average(b=9)
-
-
-# def greet(fname, lname):
-#     print('Hello', fname, lname)
-
-
-# greet('Muhammad', 'Uzair')
-
-def average(*numbers):
-    sum = 0
-    for i in numbers:
-        sum += i
-    return sum/len(numbers)
-
-
-avg = average(5, 5)
-print(avg)
+letter.format(name, country)
+print(f"Hey My Name is {name} and I am from {country}")
