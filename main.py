@@ -1,13 +1,14 @@
-# with open('test.txt', 'r') as f:
-#     print(type(f))
+# def double(x):
+#     return x*2
 
-#     f.seek(6)
+# def apply(fx,value):
+#     return 5+fx(value)
 
-#     print(f.tell())
-#     data = f.read(1)
+# double= lambda x,y:x*y
+# cube= lambda x:(x**3)
+# avg= lambda x,y:(x+y)/2
 
-#     print(data)
-
-with open('hello.txt', 'w') as f:
-    f.write('Hello World')
-    f.truncate(5)
+# print(double(5,10))
+# print(cube(5))
+# print(avg(5,10))
+# print(apply(lambda x:x**2,5))
