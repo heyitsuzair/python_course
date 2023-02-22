@@ -1,9 +1,12 @@
-import os
+x = 4
+print(x)
 
-if not os.path.exists('data'):
-    os.mkdir('data')
 
-for i in range(100):
-    if not os.path.exists(f'data/day{i+1}'):
-        os.mkdir(f'data/day{i+1}')
-    # os.mkdir(f'data/day{i+1})
+def welcome():
+    global x # uses global x variable, without it x that will be used will be the x within function
+    x = 5
+    print(f"Local x is {x}")
+
+
+welcome()
+print(f"Global x is {x}")
