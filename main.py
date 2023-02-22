@@ -1,16 +1,20 @@
-class Person:
-    def __init__(self,name,country,age):
-        self.name=name
-        self.country=country
-        self.age=age
 
-    def info(self):
-        print(f"{self.name} is {self.age} years old and he lives in {self.country}")
+def greet(fn):
+    def mfx(*args, **kwargs):
+        print('Good Morning')
+        fn(*args, **kwargs)
+        print('Thanks For Using This Func')
+    return mfx
 
 
-a = Person('Uzair','Pakistan',10)
-b = Person('Ahmed','UK',5)
-c = Person(country='USA',age=20,name='Ali')
-a.info()
-b.info()
-c.info()
+@greet
+def hello():
+    print('Hello World')
+
+@greet
+def add(x, y):
+    print(x+y)
+
+
+hello()
+add(1,2)
