@@ -1,15 +1,13 @@
 # f = open('myFile.txt', 'r')
-# text = f.read()
-# print(text)
-# f.close()
+# while True:
+#     line = f.readline()
 
-# f = open('myFile1.txt', 'w')
-# f.write('Hello Againt')
-# f.close()
+#     if not line:
+#         break
+#     print(line)
 
-# f = open('myFile1.txt', 'a')
-# f.write('Hello Againt2')
-# f.close()
 
-# with open('myFile.txt','a') as f:
-#     f.write('Hello Againt with')
+f = open('myFile3.txt', 'w')
+lines = ['line 1\n', 'line 2\n', 'line 3\n']
+f.writelines(lines)
+f.close()
