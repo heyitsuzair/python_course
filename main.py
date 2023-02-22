@@ -1,12 +1,15 @@
-x = 4
-print(x)
+# f = open('myFile.txt', 'r')
+# text = f.read()
+# print(text)
+# f.close()
 
+# f = open('myFile1.txt', 'w')
+# f.write('Hello Againt')
+# f.close()
 
-def welcome():
-    global x # uses global x variable, without it x that will be used will be the x within function
-    x = 5
-    print(f"Local x is {x}")
+# f = open('myFile1.txt', 'a')
+# f.write('Hello Againt2')
+# f.close()
 
-
-welcome()
-print(f"Global x is {x}")
+# with open('myFile.txt','a') as f:
+#     f.write('Hello Againt with')
