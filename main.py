@@ -1,13 +1,13 @@
-# f = open('myFile.txt', 'r')
-# while True:
-#     line = f.readline()
+# with open('test.txt', 'r') as f:
+#     print(type(f))
 
-#     if not line:
-#         break
-#     print(line)
+#     f.seek(6)
 
+#     print(f.tell())
+#     data = f.read(1)
 
-f = open('myFile3.txt', 'w')
-lines = ['line 1\n', 'line 2\n', 'line 3\n']
-f.writelines(lines)
-f.close()
+#     print(data)
+
+with open('hello.txt', 'w') as f:
+    f.write('Hello World')
+    f.truncate(5)
