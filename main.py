@@ -1,18 +1,16 @@
 class Person:
-    name = 'Uzair'
-    age = 20
-    country = 'Pak'
+    def __init__(self,name,country,age):
+        self.name=name
+        self.country=country
+        self.age=age
 
     def info(self):
         print(f"{self.name} is {self.age} years old and he lives in {self.country}")
 
 
-a = Person()
-a.name = 'Ahmed'
-a.age = 10
+a = Person('Uzair','Pakistan',10)
+b = Person('Ahmed','UK',5)
+c = Person(country='USA',age=20,name='Ali')
 a.info()
-
-b = Person()
-b.name = 'Uzair'
-b.age = 12
 b.info()
+c.info()
