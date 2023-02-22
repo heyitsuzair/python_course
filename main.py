@@ -1,20 +1,22 @@
+class MyClass:
+    def __init__(self, value):
+        self.value = value
 
-def greet(fn):
-    def mfx(*args, **kwargs):
-        print('Good Morning')
-        fn(*args, **kwargs)
-        print('Thanks For Using This Func')
-    return mfx
+    def show(self):
+        print(f"Value Is {self.value}")
+
+    @property
+    def ten_value(self):
+        return 10 * self.value
+
+    @ten_value.setter
+    def ten_value(self, new_value):
+        self.value = new_value/10
+
+    def value(self): return self.value
 
 
-@greet
-def hello():
-    print('Hello World')
-
-@greet
-def add(x, y):
-    print(x+y)
-
-
-hello()
-add(1,2)
+obj = MyClass(10)
+obj.ten_value = 90
+print(obj.ten_value)
+obj.show()
