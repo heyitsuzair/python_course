@@ -1,24 +1,9 @@
-class Shape:
+from PyPDF2 import PdfWriter
 
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
+merger = PdfWriter()
 
-    def area(self):
-        return self.x * self.y
+for pdf in ["file1.pdf", "file2.pdf"]:
+    merger.append(pdf)
 
-
-class Circle(Shape):
-    def __init__(self, radius):
-        self.radius = radius
-        super().__init__(radius, radius)
-
-    def area(self):
-        return 3.14 * super().area()
-
-
-# rec = Shape(3, 4)
-# print(rec.area())
-
-c = Circle(5)
-print(c.area())
+merger.write("merged-pdf.pdf")
+merger.close()
