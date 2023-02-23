@@ -1,17 +1,18 @@
 class Employee:
-    company = 'Apple'
-
-    def show(self):
-        print(f"The Name Is {self.name} and company is {self.company}")
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
 
     @classmethod
-    def change_company(cls, newCompany):
-        cls.company = newCompany
+    def from_str(cls, string):
+        return cls(string.split('-')[0], int(string.split('-')[1]))
+
+# e = Employee('Uzair', 10000)
+# print(e.name)
+# print(e.salary)
 
 
-e1 = Employee()
-e1.name = 'Uzair'
-e1.show()
-e1.change_company('Tesla')
-e1.show()
-print(Employee.company)
+string = 'Uzair-12000'
+e = Employee.from_str(string)
+print(e.name)
+print(e.salary)
