@@ -1,18 +1,22 @@
-class Math:
+class Employee:
+    companyName = 'Apple'
 
-    def __init__(self, num):
-        self.num = num
+    def __init__(self, name):
+        self.name = name
+        self.raise_amount = 0.02
 
-    def add_to_num(self, n):
-        self.num = self.num + n
-
-    @staticmethod
-    def add(a, b):
-        print(a+b)
+    def show_details(self):
+        print(
+            f"Name Of Employee Is {self.name} And The Raise Amount In {self.companyName} Is {self.raise_amount}")
 
 
-a = Math(11)
-print(a.num)
-a.add_to_num(6)
-print(a.num)
-Math.add(1,2)
+emp = Employee('Uzair')
+emp.raise_amount = 0.3
+emp.companyName = 'Apple Pak'
+emp.show_details()
+Employee.companyName = 'Samsung'
+# Employee.show_details(emp)
+emp1 = Employee('Ahmed')
+emp1.companyName ='Nestle'
+emp1.show_details()
+print(Employee.companyName)
