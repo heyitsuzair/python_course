@@ -1,22 +1,17 @@
 class Employee:
-    companyName = 'Apple'
+    company = 'Apple'
 
-    def __init__(self, name):
-        self.name = name
-        self.raise_amount = 0.02
+    def show(self):
+        print(f"The Name Is {self.name} and company is {self.company}")
 
-    def show_details(self):
-        print(
-            f"Name Of Employee Is {self.name} And The Raise Amount In {self.companyName} Is {self.raise_amount}")
+    @classmethod
+    def change_company(cls, newCompany):
+        cls.company = newCompany
 
 
-emp = Employee('Uzair')
-emp.raise_amount = 0.3
-emp.companyName = 'Apple Pak'
-emp.show_details()
-Employee.companyName = 'Samsung'
-# Employee.show_details(emp)
-emp1 = Employee('Ahmed')
-emp1.companyName ='Nestle'
-emp1.show_details()
-print(Employee.companyName)
+e1 = Employee()
+e1.name = 'Uzair'
+e1.show()
+e1.change_company('Tesla')
+e1.show()
+print(Employee.company)
