@@ -1,22 +1,17 @@
-class MyClass:
-    def __init__(self, value):
-        self.value = value
+class Employee:
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
 
-    def show(self):
-        print(f"Value Is {self.value}")
+    def show_details(self):
+        print(f"Name Of Employee Is {self.name} And ID Is {self.id}")
 
-    @property
-    def ten_value(self):
-        return 10 * self.value
+class Programmer(Employee):
+    def show_lang(self):
+        print(f"Default Language Is Python")
 
-    @ten_value.setter
-    def ten_value(self, new_value):
-        self.value = new_value/10
+emp = Employee('Uzair', 402)
+emp.show_details()
 
-    def value(self): return self.value
-
-
-obj = MyClass(10)
-obj.ten_value = 90
-print(obj.ten_value)
-obj.show()
+emp2=Programmer('Ahmed',101)
+emp2.show_lang()
