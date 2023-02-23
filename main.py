@@ -1,9 +1,21 @@
-from PyPDF2 import PdfWriter
+class Vector:
+    def __init__(self, i, j, k):
+        self.i = i
+        self.j = j
+        self.k = k
 
-merger = PdfWriter()
+    def __str__(self):
+        return f"{self.i}i + {self.j}j + {self.k}k"
 
-for pdf in ["file1.pdf", "file2.pdf"]:
-    merger.append(pdf)
+    def __add__(self, x):
+        return Vector(self.i + x.i, + self.j + x.j, + self.k + x.k)
 
-merger.write("merged-pdf.pdf")
-merger.close()
+
+v1 = Vector(2, 3, 4)
+print(v1)
+
+v2 = Vector(5, 6, 9)
+print(v2)
+
+print(v1+v2)
+print(type(v1+v2))
