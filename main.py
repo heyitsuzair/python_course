@@ -1,13 +1,23 @@
-import shutil
-import os
-# shutil.copy('main.py', 'main2.py')
-# shutil.copytree('data','data2')
+import requests
+# url = 'https://jsonplaceholder.typicode.com/posts'
+from bs4 import BeautifulSoup
 
-# if not os.path.exists('test'):
-#     os.mkdir('test')
+# response = requests.get('https://google.com')
+# print(response.text)
 
-# shutil.move('myFile.txt', 'test/myFile.txt')
+# data = {
+#     "userId": "12",
+#     "title": "hello2",
+#     "body": "fmpfefefpmep2"
+# }
 
-# shutil.rmtree('data')
+# response = requests.post(
+#    url , json=data)
+# print(response.text)
 
-os.remove('myFile1.txt')
+
+response = requests.get('https://google.com')
+soup = BeautifulSoup(response.text, 'html.parser')
+
+for img in soup.find_all('img'):
+    print(img['src'])
